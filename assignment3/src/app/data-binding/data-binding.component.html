@@ -1,0 +1,11 @@
+<!--<button class="btn btn-primary"-->
+        <!--[disabled]="username.length === 0"-->
+        <!--(click)="handleButtonClick()">Do Button Stuff-->
+<!--</button>-->
+
+<button class="btn btn-primary"
+        (click)="toggleTextVisability()">Display Details</button>
+<p [hidden]="isTextHidden">Hidden Text</p>
+<p *ngFor="let c of clickArray"
+   [ngClass]="{ textColor: clickArray.length >= 5 }"
+   [ngStyle]="{ backgroundColor: getBackgroundColor() }">{{ c }}</p>
