@@ -6,6 +6,6 @@
 <button class="btn btn-primary"
         (click)="toggleTextVisability()">Display Details</button>
 <p [hidden]="isTextHidden">Hidden Text</p>
-<p *ngFor="let c of clickArray"
-   [ngClass]="{ textColor: clickArray.length >= 5 }"
-   [ngStyle]="{ backgroundColor: getBackgroundColor() }">{{ c }}</p>
+<p *ngFor="let c of clickArray; let i = index"
+   [ngClass]="{ textColor: i >= 4 }"
+   [ngStyle]="{ backgroundColor: getBackgroundColor(i) }">{{ c }}</p>

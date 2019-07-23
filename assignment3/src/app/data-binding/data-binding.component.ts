@@ -15,13 +15,12 @@ export class DataBindingComponent implements OnInit {
 
   toggleTextVisability() {
     if (this.isTextHidden === true) {
-      console.log("MATT");
       this.isTextHidden = false;
     }
     this.clickArray.push(Date.now());
   }
 
-  getBackgroundColor() {
-    return this.clickArray.length >= 5 ? 'blue' : 'green';
+  getBackgroundColor(index) {
+    return index >= 4 ? 'blue' : 'green';
   }
 }
